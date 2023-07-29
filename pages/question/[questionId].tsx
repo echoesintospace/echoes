@@ -1,12 +1,8 @@
-import { Database } from '@/lib/schema'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
-import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import QuestionView from '@/components/QuestionView';
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 import { Alert } from 'flowbite-react';
-
-type Question = Database['public']['Tables']['questions']['Row']
 
 const AskQuestion = () => {
 
@@ -14,7 +10,6 @@ const AskQuestion = () => {
     const supabase = useSupabaseClient()
 
     const router = useRouter()
-    const [question, setQuestion] = useState<Question>()
 
     const { questionId } = router.query
     const questionIdStr = questionId as string
