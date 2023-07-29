@@ -28,7 +28,14 @@ export default function QuestionList() {
 
       if (error) 
       <Alert color="info">There was an error!: {error.message}</Alert>
-      else setQuestions(questions)
+      else {
+        console.log(questions)
+        if ( !questions || questions.length === 0 ) {
+          setQuestions([{id: 0, content: 'There\'s no questions yet!', answer: 'If you ask a question, you\'ll be the first!', likes: 0, user_id: '0', inserted_at: '0', updated_at: '0', views: 0}])
+        } else {
+          setQuestions(questions)
+        }
+      }
     }
 
     fetchQuestions()
