@@ -26,7 +26,7 @@ const AskQuestion = () => {
             <div className="w-full h-full flex justify-center items-center p-4">
               <div className="w-full h-full sm:h-auto sm:w-2/5 max-w-sm p-5 bg-white shadow flex flex-col text-base">
                 <span className="font-sans text-2xl text-center pb-2 mb-1 border-b mx-4 align-center">
-                  You just need to sign in to ask a question
+                  You just need to sign in to view a question
                 </span>
                 <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} theme="dark" />
               </div>
