@@ -40,9 +40,6 @@ export default function SiteHeader() {
           <Navbar.Link href="/" >
           The Questions
           </Navbar.Link>
-          <Navbar.Link href="/faq" >
-          FAQ
-          </Navbar.Link>
           <Navbar.Link href="/signout" >
           Sign out
           </Navbar.Link>
@@ -79,9 +76,6 @@ export default function SiteHeader() {
           </Navbar.Link>
           <Navbar.Link href="/" >
           The Questions
-          </Navbar.Link>
-          <Navbar.Link href="/faq" >
-          FAQ
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>      
