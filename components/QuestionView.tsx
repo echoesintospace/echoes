@@ -1,7 +1,6 @@
 import { Database } from '@/lib/schema'
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
-import Link from 'next/link';
 import { Alert, Button, Card } from 'flowbite-react';
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
 

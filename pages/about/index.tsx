@@ -31,19 +31,7 @@ const AskQuestionOk = () => {
             </p>
 
             <p className="font-normal text-gray-700 dark:text-gray-400">
-            You might be asking why should I be answering anyone&apos;s questions. And maybe I can&apos;t. And I may not get to them all. But I&apos;ll try.
-            </p>
-
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-            I have a lot of life experience. And I have read a lot. And most importantly, I have come to some realisations. Mostly due to transformations that I experienced over certain periods in my life, that have caused me to grow.
-            </p>
-
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-            And I&apos;m happy to share those with you. And provide my insights from my perspective.
-            </p>
-
-            <p className="font-normal text-gray-700 dark:text-gray-400">
-            With the hope that they may bring you peace, and some understanding.
+            The hope is, is that my answer may bring you some peace, and some understanding.
             </p>
 
             <Button

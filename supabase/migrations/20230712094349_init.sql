@@ -13,4 +13,5 @@ create policy "Individuals can view their own questions. " on questions for
 create policy "Individuals can update their own questions." on questions for
     update using (auth.uid() = user_id);
 create policy "Individuals can delete their own questions." on questions for
-    delete using (auth.uid() = user_id);%
+    delete using (auth.uid() = user_id);
+    
