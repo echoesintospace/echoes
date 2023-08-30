@@ -1,9 +1,11 @@
 
 import { Alert, Button, Card } from 'flowbite-react';
 import Link from 'next/link';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Layout from '@/components/layoutold';
 
-const AskQuestionOk = () => {
+const About = () => {
 
   const router = useRouter()
 
@@ -12,7 +14,13 @@ const AskQuestionOk = () => {
   }
 
     return (
-        <div className="w-full h-full bg-gray-200">
+      <>
+      <Head>
+        <title key="title">About</title>
+        <meta property="og:title" content="About" key="title" />
+        <meta property="og:description" content="About Echoes into space" key="title" />
+      </Head>
+      <div className="w-full h-full bg-gray-200">
           <div
             className="w-full flex flex-col justify-center items-center p-4"
             style={{ minWidth: 250, maxWidth: 600, margin: 'auto' }}
@@ -44,7 +52,22 @@ const AskQuestionOk = () => {
           </Card>
           </div>
       </div>  
+</>
     );
 };
 
-export default AskQuestionOk;
+export async function generateMetadata() {
+
+  const myTitle = "About";
+
+  return {
+    title: myTitle,
+    description: "About Echoes into Space"
+  };
+}
+
+export const metadata = {
+  title: 'New Title'
+}
+
+export default About;

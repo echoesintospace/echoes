@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>Echoes into Space</title>
+        <meta property="og:title" content="Echoes into Space" key="title" />
         <meta name="description" content="Ask a question. A question you've always wanted to ask. You might get an answer. Or it might just be an echo into space." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

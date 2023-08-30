@@ -5,6 +5,8 @@ export default function Document() {
 
 <Html lang="en">
 <Head>
+      <title>Echoes into Space</title>
+        <meta property="og:title" content="Echoes into Space" key="title" />
         <link
           href="/favicon/apple-touch-icon.png"
           rel="apple-touch-icon"

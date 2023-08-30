@@ -1,6 +1,7 @@
 import QuestionAdd from '@/components/QuestionAdd';
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+import Head from 'next/head';
 
 const AskQuestion = () => {
 
@@ -8,7 +9,13 @@ const AskQuestion = () => {
     const supabase = useSupabaseClient()
 
     return (
-        <div className="w-full h-full bg-gray-200">
+      <>
+      <Head>
+        <title key="title">About</title>
+        <meta property="og:title" content="About" key="title" />
+        <meta property="og:description" content="About Echoes into space" key="title" />
+      </Head>
+      <div className="w-full h-full bg-gray-200">
         {!session ? (
           <div className="min-w-full min-h-screen flex justify-center">
             <div className="w-full h-full flex justify-center items-center p-4">
@@ -28,7 +35,19 @@ const AskQuestion = () => {
             <QuestionAdd session={session} />
           </div>
         )}
-      </div>  );
+      </div>  
+      </>
+      );
 };
 
 export default AskQuestion;
+
+export async function generateMetadata() {
+
+  const myTitle = "Ask a question";
+
+  return {
+    title: myTitle,
+    description: "You can ask a question here."
+  };
+}
