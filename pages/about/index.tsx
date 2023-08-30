@@ -66,8 +66,5 @@ export async function generateMetadata() {
   };
 }
 
-export const metadata = {
-  title: 'New Title'
-}
 
 export default About;
