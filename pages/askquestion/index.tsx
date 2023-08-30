@@ -11,8 +11,8 @@ const AskQuestion = () => {
     return (
       <>
       <Head>
-        <title key="title">About</title>
-        <meta property="og:title" content="About" key="title" />
+        <title key="title">Ask a question</title>
+        <meta property="og:title" content="Ask a question" key="title" />
         <meta property="og:description" content="About Echoes into space" key="title" />
       </Head>
       <div className="w-full h-full bg-gray-200">
@@ -41,13 +41,3 @@ const AskQuestion = () => {
 };
 
 export default AskQuestion;
-
-export async function generateMetadata() {
-
-  const myTitle = "Ask a question";
-
-  return {
-    title: myTitle,
-    description: "You can ask a question here."
-  };
-}
