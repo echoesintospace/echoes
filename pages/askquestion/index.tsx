@@ -10,11 +10,6 @@ const AskQuestion = () => {
 
     return (
       <>
-      <Head>
-        <title key="title">Ask a question</title>
-        <meta property="og:title" content="Ask a question" key="title" />
-        <meta property="og:description" content="About Echoes into space" key="title" />
-      </Head>
       <div className="w-full h-full bg-gray-200">
         {!session ? (
           <div className="min-w-full min-h-screen flex justify-center">
