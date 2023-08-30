@@ -3,6 +3,7 @@ import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
 import { Alert, Button, Card } from 'flowbite-react';
 import { Auth, ThemeSupa } from '@supabase/auth-ui-react'
+import Head from 'next/head';
 
 type Question = Database['public']['Tables']['questions']['Row']
 
@@ -16,7 +17,7 @@ export default function QuestionView({ questionId }: { questionId: string }) {
   useEffect(() => {
     const fetchQuestion = async () => {
 
-      const { data: questionList, error } = await supabase
+      const { data: thisQuestion, error } = await supabase
         .from('questions')
         .select('*')
         .eq('id', questionId)
@@ -26,7 +27,7 @@ export default function QuestionView({ questionId }: { questionId: string }) {
       if (error)  
         <Alert color="info">There was an error!: <br></br> {error.message}</Alert>
       else {
-        setQuestion(questionList);
+        setQuestion(thisQuestion);
       }
     }
 
@@ -60,8 +61,14 @@ export default function QuestionView({ questionId }: { questionId: string }) {
   }
 
   return (
-    <div className="w-full h-full bg-gray-200">
+    <>
+      <Head>
+        <title>{`Question | ${question?.content}`}</title>
+        <meta property="og:title" content="About" key="title" />
+        <meta property="og:description" content="About Echoes into space" key="title" />
+      </Head>
       {!session ? (
+      <div className="w-full h-full bg-gray-200">
         <div className="min-w-full min-h-screen flex justify-center">
           <div className="w-full h-full flex justify-center items-center p-4">
             <div className="w-full h-full sm:h-auto sm:w-2/5 max-w-sm p-5 bg-white shadow flex flex-col text-base">
@@ -72,7 +79,9 @@ export default function QuestionView({ questionId }: { questionId: string }) {
             </div>
           </div>
         </div>
+        </div>
       ) : (
+      <div className="w-full h-full bg-gray-200">
         <div
           className="w-full flex flex-col justify-center items-center p-4"
           style={{ minWidth: 250, maxWidth: 600, margin: 'auto' }}
@@ -105,10 +114,12 @@ export default function QuestionView({ questionId }: { questionId: string }) {
           </Card>
         </div>
       </div>
+      </div>
       )}
+      
 
 {!!errorText && <Alert color="red">{errorText}</Alert>}
 {!!infoText && <Alert color="green">{infoText}</Alert>}
-    </div>
-  )
+  </>
+    )
 }

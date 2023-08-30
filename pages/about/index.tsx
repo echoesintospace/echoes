@@ -16,7 +16,7 @@ const About = () => {
     return (
       <>
       <Head>
-        <title key="title">About</title>
+        <title>About</title>
         <meta property="og:title" content="About" key="title" />
         <meta property="og:description" content="About Echoes into space" key="title" />
       </Head>
@@ -57,8 +57,8 @@ const About = () => {
 };
 
 export const metadata = {
-  title: 'Ask a question',
-  descriptin: 'Ask a question. A question you\'ve always wanted to ask. You might get an answer. Or it might just be an echo into space.'
+  title: 'About',
+  descriptin: 'About Echoes into space'
 }
 
 export default About;

@@ -5,16 +5,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Echoes into Space</title>
-        <meta property="og:title" content="Echoes into Space" key="title" />
-        <meta name="description" content="Ask a question. A question you've always wanted to ask. You might get an answer. Or it might just be an echo into space." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"/>
-        <link rel="manifest" href="/site.webmanifest"/>
+        <title>Echoes into space</title>
+        <meta property="og:title" content="AEchoes into space" key="title" />
+        <meta property="og:description" content="Echoes into space, where all your questions may end up" key="title" />
       </Head>
       <div className="w-full h-full bg-gray-200">
           <div
