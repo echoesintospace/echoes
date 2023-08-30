@@ -58,7 +58,7 @@ const About = () => {
 
 export const metadata = {
   title: 'Ask a question',
-  descriptin: 'Ask a question. A question you\'ve always wanted to ask. You might get an answer. Or it might just be an echo into space.
+  descriptin: 'Ask a question. A question you\'ve always wanted to ask. You might get an answer. Or it might just be an echo into space.'
 }
 
 export default About;
