@@ -56,15 +56,9 @@ const About = () => {
     );
 };
 
-export async function generateMetadata() {
-
-  const myTitle = "About";
-
-  return {
-    title: myTitle,
-    description: "About Echoes into Space"
-  };
+export const metadata = {
+  title: 'Ask a question',
+  descriptin: 'Ask a question. A question you\'ve always wanted to ask. You might get an answer. Or it might just be an echo into space.
 }
-
 
 export default About;
