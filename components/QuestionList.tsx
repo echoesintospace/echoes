@@ -24,7 +24,7 @@ export default function QuestionList() {
         .from('questions')
         .select('*')
         .not('answer', 'is', null)
-        .order('id', { ascending: true })
+        .order('updated_at', { ascending: false })
 
       if (error) 
       <Alert color="info">There was an error!: {error.message}</Alert>
